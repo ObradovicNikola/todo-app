@@ -1,0 +1,150 @@
+@function force-rgba($r, $g, $b, $a) {
+    @return unquote("rgba(#{$r}, #{$g}, #{$b}, #{$a})");
+}
+
+.todo-container {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 2vh;
+    padding: 3%;
+    max-height: 80vh;
+}
+
+.todo-list {
+    padding: 0px 40px 40px 40px;
+    max-height: 90vh;
+    background: force-rgba(255, 255, 255, 80%);
+}
+
+.todo-list h1 {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    font-size: 2.7rem;
+    text-align: center;
+    color: rgb(255, 130, 2);
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+.todo-form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 400px;
+    margin: auto;
+}
+
+.todo-form input,
+.todo-form button,
+.todo-item {
+    font-size: 1.5rem;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.todo-form input {
+    width: 400px;
+}
+
+button {
+    background-color: rgb(29, 103, 105);
+    border: none;
+    font-size: 50px;
+    color: rgb(255, 130, 2);
+}
+
+.todo-form button {
+    font-size: 3rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* TASK LIST */
+
+.todo-items {
+    overflow-y: auto;
+    max-height: 45vh;
+    padding: 0;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 530px) {
+
+    .todo-form,
+    .todo-items {
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .todo-form,
+    .todo-items {
+        width: 250px;
+    }
+
+    .todo-form input,
+    .todo-form button,
+    .todo-item {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    .todo-form input,
+    .todo-form button,
+    .todo-item {
+        font-size: 1rem;
+    }
+
+    .todo-list {
+        padding: 0 20px 20px 20px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .todo-form,
+    .todo-form input,
+    .todo-items {
+        width: 600px;
+    }
+
+    .todo-form input,
+    .todo-form button,
+    .todo-item {
+        font-size: 2.3rem;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+
+    .todo-form,
+    .todo-form input,
+    .todo-items {
+        width: 1000px;
+    }
+
+    .todo-form input,
+    .todo-form button,
+    .todo-item {
+        font-size: 2.6rem;
+    }
+}

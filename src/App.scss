@@ -1,0 +1,58 @@
+html,
+body,
+.background {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+}
+
+#p {
+    fill: black;
+    fill-opacity: 0.2;
+    stroke-width: 2.3px;
+}
+
+
+#p use:nth-child(3) {
+    fill: white;
+    fill-opacity: 0.1;
+    animation-delay: -2s;
+}
+
+:root {
+    background: black;
+}
+
+.App {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

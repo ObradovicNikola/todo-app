@@ -1,0 +1,60 @@
+.todo-item {
+    display: flex;
+    background: black;
+    align-content: center;
+    color: rgb(238, 255, 0);
+}
+
+.todo-item:nth-of-type(even) {
+    background: rgb(68, 68, 68);
+}
+
+.svg-container {
+    width: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.svg-container svg {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    margin-top: 30%;
+}
+
+
+.svg-container:hover {
+    cursor: pointer;
+}
+
+.svg-container:hover svg {
+    animation: select .5s forwards;
+}
+
+.taskRemover {
+    stroke: lightgrey;
+    stroke-width: 5;
+}
+
+@keyframes select {
+
+    from {
+        stroke: lightgrey;
+        stroke-width: 5;
+    }
+
+    to {
+        stroke: rgb(255, 130, 2);
+        stroke-width: 8;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .svg-container svg {
+        margin-top: 50%;
+    }
+}
